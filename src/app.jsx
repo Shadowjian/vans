@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import About from "./pages/about"
-import Home from "./pages/home"
-import Vans from "./pages/vans"
+import About from "./pages/About"
+import Home from "./pages/Home"
+import Vans from "./pages/Vans"
 
 import "./server"
 import Nav from "./components/nav"
 import { useEffect, useState } from "react"
+import VanDetail from "./pages/VanDetail"
 
 export default function App() {
   const [vans, setVans] = useState([])
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/vans" element={<Vans vans={vans} />} />
+        <Route path="/vans/:id" element={<VanDetail vans={vans} />} />
       </Routes>
     </BrowserRouter>
   )

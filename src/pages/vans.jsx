@@ -1,12 +1,19 @@
+import { Link } from "react-router-dom"
+
 export const VanCard = ({ vans }) => {
   const vanElements = vans.map((van) => (
     <div key={van.id} className="van-tile">
-      <img src={van.imageUrl} />
-      <div className="van-info">
-        <h3>{van.name}</h3>
-        <p>${van.price}/day</p>
-      </div>
-      <i className={`van-type ${van.type} selected`}>{van.type}</i>
+      <Link
+        to={van.id}
+        aria-label={`View details for ${van.name}, priced at ${van.price} per day`}
+      >
+        <img src={van.imageUrl} alt={`Image at ${van.name}`} />
+        <div className="van-info">
+          <h3>{van.name}</h3>
+          <p>${van.price}/day</p>
+        </div>
+        <i className={`van-type ${van.type} selected`}>{van.type}</i>
+      </Link>
     </div>
   ))
 
