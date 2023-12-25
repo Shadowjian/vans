@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom"
 import About from "./pages/About"
 import Home from "./pages/Home"
 import Vans from "./pages/Vans"
@@ -17,7 +17,7 @@ export default function App() {
       .then((data) => setVans(data.vans))
   }, [])
   return (
-    <BrowserRouter>
+    <HashRouter>
       <header>
         {/* <Link className="site-logo" to="/">
           #VanLife
@@ -34,6 +34,6 @@ export default function App() {
         <Route path="/vans" element={<Vans vans={vans} />} />
         <Route path="/vans/:id" element={<VanDetail vans={vans} />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
