@@ -28,7 +28,7 @@ export default function Vans({ vans }) {
   return (
     <>
       <h1>Expore our van options</h1>
-      <VanCard vans={vans} />
+      {vans ? <VanCard vans={vans} /> : <h2>Loading...</h2>}
     </>
   )
 }
