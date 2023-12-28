@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import Home from "./pages/home/Index"
+import About from "./pages/about/Index"
 
 import "./server"
 import { useEffect, useState } from "react"
@@ -55,7 +56,7 @@ export default function App() {
             </Route>
           </Route>
 
-          {/* <Route path="about" element={<About />} /> */}
+          <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans vans={vans} />} />
           <Route path="vans/:id" element={<VanDetail vans={vans} />} />
         </Route>

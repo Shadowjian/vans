@@ -23,7 +23,7 @@ export default function About() {
           <br />
           Your van is ready.
         </h2>
-        <Link className="link-button" to="/vans">
+        <Link to="/vans" className="link-button">
           Explore our vans
         </Link>
       </div>
