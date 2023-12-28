@@ -1,13 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import About from "./pages/about/index"
-import Home from "./pages/home/index"
+import Home from "./pages/home"
 
 import "./server"
 import { useEffect, useState } from "react"
 import Layout from "./components/Layout"
 import VanDetail from "./pages/vans/VanDetail"
-import Vans from "./pages/vans/index"
+import Vans from "./pages/vans/Index"
 
 // host imports
 import HostLayout from "./pages/host/Layout"
@@ -56,7 +55,7 @@ export default function App() {
             </Route>
           </Route>
 
-          <Route path="about" element={<About />} />
+          {/* <Route path="about" element={<About />} /> */}
           <Route path="vans" element={<Vans vans={vans} />} />
           <Route path="vans/:id" element={<VanDetail vans={vans} />} />
         </Route>

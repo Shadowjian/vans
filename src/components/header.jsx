@@ -13,12 +13,12 @@ export default function Header() {
         >
           Host
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="about"
           // className={({ isActive }) => (isActive ? "active-link" : null)}
         >
           About
-        </NavLink>
+        </NavLink> */}
         <NavLink
           to="vans"
           // className={({ isActive }) => (isActive ? "active-link" : null)}
