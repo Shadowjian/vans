@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import Home from "./pages/home"
+import Home from "./pages/home/Index"
 
 import "./server"
 import { useEffect, useState } from "react"
@@ -14,7 +14,7 @@ import Dashboard from "./pages/host/Dashboard"
 import Income from "./pages/host/Income"
 import Reviews from "./pages/host/Reviews"
 import HostVans from "./pages/host/Vans"
-import Van from "./pages/host/van"
+import Van from "./pages/host/van/Index"
 import Details from "./pages/host/van/Details"
 import Pricing from "./pages/host/van/Pricing"
 import Photos from "./pages/host/van/Photos"
