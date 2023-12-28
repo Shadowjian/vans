@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import About from "./pages/about"
-import Home from "./pages/home"
+
+import About from "./pages/about/index"
+import Home from "./pages/home/index"
 
 import "./server"
 import { useEffect, useState } from "react"
 import Layout from "./components/Layout"
 import VanDetail from "./pages/vans/VanDetail"
-import Vans from "./pages/vans"
+import Vans from "./pages/vans/index"
 
 // host imports
 import HostLayout from "./pages/host/Layout"
