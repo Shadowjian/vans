@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export const VanCard = ({ vans }) => {
+const Vans = ({ vans }) => {
   const vanElements = vans.map((van) => (
     <div key={van.id} className="van-tile">
       <Link
@@ -19,16 +19,10 @@ export const VanCard = ({ vans }) => {
 
   return (
     <div className="van-list-container">
+      <h1>Expore our van options</h1>
       <div className="van-list">{vanElements}</div>
     </div>
   )
 }
 
-export default function Vans({ vans }) {
-  return (
-    <>
-      <h1>Expore our van options</h1>
-      {vans ? <VanCard vans={vans} /> : <h2>Loading...</h2>}
-    </>
-  )
-}
+export default Vans
